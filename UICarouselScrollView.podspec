@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'UICarouselScrollView'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'Horizontal carousel scrollview with specific content size'
   s.homepage         = 'https://github.com/skswhwo/UICarouselScrollView'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
