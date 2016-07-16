@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarouselScrollView">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UICarouselScrollView">
             <connections>
                 <outlet property="activityIndicator" destination="gMU-8L-OiK" id="O49-kK-VKA"/>
                 <outlet property="descriptionView" destination="1dA-Jd-wbb" id="T2s-0K-cjs"/>
