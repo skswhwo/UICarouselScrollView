@@ -1,0 +1,350 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E2ABC3E51D3A665600191CC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC3E41D3A665600191CC7 /* main.m */; };
+		E2ABC3E81D3A665600191CC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC3E71D3A665600191CC7 /* AppDelegate.m */; };
+		E2ABC3EB1D3A665600191CC7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC3EA1D3A665600191CC7 /* ViewController.m */; };
+		E2ABC3EE1D3A665600191CC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC3EC1D3A665600191CC7 /* Main.storyboard */; };
+		E2ABC3F01D3A665600191CC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC3EF1D3A665600191CC7 /* Assets.xcassets */; };
+		E2ABC3F31D3A665600191CC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC3F11D3A665600191CC7 /* LaunchScreen.storyboard */; };
+		E2ABC4041D3A677900191CC7 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC4011D3A677900191CC7 /* LICENSE */; };
+		E2ABC4051D3A677900191CC7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC4021D3A677900191CC7 /* README.md */; };
+		E2ABC4061D3A677900191CC7 /* UICarouselScrollView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC4031D3A677900191CC7 /* UICarouselScrollView.podspec */; };
+		E2ABC4101D3A6D4300191CC7 /* CarouselScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC40E1D3A6D4300191CC7 /* CarouselScrollView.m */; };
+		E2ABC4111D3A6D4300191CC7 /* CarouselScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC40F1D3A6D4300191CC7 /* CarouselScrollView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E2ABC3E01D3A665600191CC7 /* UICarouselScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICarouselScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2ABC3E41D3A665600191CC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E2ABC3E61D3A665600191CC7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E2ABC3E71D3A665600191CC7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E2ABC3E91D3A665600191CC7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E2ABC3EA1D3A665600191CC7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E2ABC3ED1D3A665600191CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E2ABC3EF1D3A665600191CC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2ABC3F21D3A665600191CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E2ABC3F41D3A665600191CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2ABC4011D3A677900191CC7 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E2ABC4021D3A677900191CC7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E2ABC4031D3A677900191CC7 /* UICarouselScrollView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = UICarouselScrollView.podspec; path = ../UICarouselScrollView.podspec; sourceTree = "<group>"; };
+		E2ABC40D1D3A6D4300191CC7 /* CarouselScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarouselScrollView.h; path = ../UICarouselScrollView/Classes/CarouselScrollView.h; sourceTree = "<group>"; };
+		E2ABC40E1D3A6D4300191CC7 /* CarouselScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarouselScrollView.m; path = ../UICarouselScrollView/Classes/CarouselScrollView.m; sourceTree = "<group>"; };
+		E2ABC40F1D3A6D4300191CC7 /* CarouselScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CarouselScrollView.xib; path = ../UICarouselScrollView/Classes/CarouselScrollView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2ABC3DD1D3A665600191CC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E2ABC3D71D3A665600191CC7 = {
+			isa = PBXGroup;
+			children = (
+				E2ABC4071D3A688800191CC7 /* Classes */,
+				E2ABC3FA1D3A666300191CC7 /* Podspec Metadata */,
+				E2ABC3E21D3A665600191CC7 /* UICarouselScrollView */,
+				E2ABC3E11D3A665600191CC7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E2ABC3E11D3A665600191CC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2ABC3E01D3A665600191CC7 /* UICarouselScrollView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2ABC3E21D3A665600191CC7 /* UICarouselScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				E2ABC3E61D3A665600191CC7 /* AppDelegate.h */,
+				E2ABC3E71D3A665600191CC7 /* AppDelegate.m */,
+				E2ABC3E91D3A665600191CC7 /* ViewController.h */,
+				E2ABC3EA1D3A665600191CC7 /* ViewController.m */,
+				E2ABC3EC1D3A665600191CC7 /* Main.storyboard */,
+				E2ABC3EF1D3A665600191CC7 /* Assets.xcassets */,
+				E2ABC3F11D3A665600191CC7 /* LaunchScreen.storyboard */,
+				E2ABC3F41D3A665600191CC7 /* Info.plist */,
+				E2ABC3E31D3A665600191CC7 /* Supporting Files */,
+			);
+			path = UICarouselScrollView;
+			sourceTree = "<group>";
+		};
+		E2ABC3E31D3A665600191CC7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2ABC3E41D3A665600191CC7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2ABC3FA1D3A666300191CC7 /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				E2ABC4011D3A677900191CC7 /* LICENSE */,
+				E2ABC4021D3A677900191CC7 /* README.md */,
+				E2ABC4031D3A677900191CC7 /* UICarouselScrollView.podspec */,
+			);
+			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		E2ABC4071D3A688800191CC7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E2ABC40D1D3A6D4300191CC7 /* CarouselScrollView.h */,
+				E2ABC40E1D3A6D4300191CC7 /* CarouselScrollView.m */,
+				E2ABC40F1D3A6D4300191CC7 /* CarouselScrollView.xib */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2ABC3DF1D3A665600191CC7 /* UICarouselScrollView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2ABC3F71D3A665600191CC7 /* Build configuration list for PBXNativeTarget "UICarouselScrollView" */;
+			buildPhases = (
+				E2ABC3DC1D3A665600191CC7 /* Sources */,
+				E2ABC3DD1D3A665600191CC7 /* Frameworks */,
+				E2ABC3DE1D3A665600191CC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UICarouselScrollView;
+			productName = UICarouselScrollView;
+			productReference = E2ABC3E01D3A665600191CC7 /* UICarouselScrollView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2ABC3D81D3A665600191CC7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = com.skswhwo;
+				TargetAttributes = {
+					E2ABC3DF1D3A665600191CC7 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = E2ABC3DB1D3A665600191CC7 /* Build configuration list for PBXProject "UICarouselScrollView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E2ABC3D71D3A665600191CC7;
+			productRefGroup = E2ABC3E11D3A665600191CC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2ABC3DF1D3A665600191CC7 /* UICarouselScrollView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2ABC3DE1D3A665600191CC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2ABC3F31D3A665600191CC7 /* LaunchScreen.storyboard in Resources */,
+				E2ABC4111D3A6D4300191CC7 /* CarouselScrollView.xib in Resources */,
+				E2ABC4061D3A677900191CC7 /* UICarouselScrollView.podspec in Resources */,
+				E2ABC3F01D3A665600191CC7 /* Assets.xcassets in Resources */,
+				E2ABC4041D3A677900191CC7 /* LICENSE in Resources */,
+				E2ABC3EE1D3A665600191CC7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2ABC3DC1D3A665600191CC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2ABC3EB1D3A665600191CC7 /* ViewController.m in Sources */,
+				E2ABC4101D3A6D4300191CC7 /* CarouselScrollView.m in Sources */,
+				E2ABC3E81D3A665600191CC7 /* AppDelegate.m in Sources */,
+				E2ABC4051D3A677900191CC7 /* README.md in Sources */,
+				E2ABC3E51D3A665600191CC7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E2ABC3EC1D3A665600191CC7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2ABC3ED1D3A665600191CC7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E2ABC3F11D3A665600191CC7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2ABC3F21D3A665600191CC7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E2ABC3F51D3A665600191CC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E2ABC3F61D3A665600191CC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2ABC3F81D3A665600191CC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UICarouselScrollView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.skswhwo.UICarouselScrollView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E2ABC3F91D3A665600191CC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UICarouselScrollView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.skswhwo.UICarouselScrollView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2ABC3DB1D3A665600191CC7 /* Build configuration list for PBXProject "UICarouselScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2ABC3F51D3A665600191CC7 /* Debug */,
+				E2ABC3F61D3A665600191CC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2ABC3F71D3A665600191CC7 /* Build configuration list for PBXNativeTarget "UICarouselScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2ABC3F81D3A665600191CC7 /* Debug */,
+				E2ABC3F91D3A665600191CC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E2ABC3D81D3A665600191CC7 /* Project object */;
+}
