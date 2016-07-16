@@ -1,11 +1,11 @@
 
-#import "CarouselScrollView.h"
+#import "UICarouselScrollView.h"
+#import "UIGradientView.h"
 
-#define BannerBaseIndex 40000
-#define BannerContentAppearanceTime 0.2
-#define BannerSlideTime 6
+#define BaseViewIndex 40000
+#define BaseDescriptionAppearanceTime 0.2
 
-@interface CarouselScrollView ()
+@interface UICarouselScrollView ()
 <UIScrollViewDelegate>
 {
     NSTimer *scheduler;
@@ -13,7 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *descriptionView;
-@property (weak, nonatomic) IBOutlet UIView *gradientView;
+@property (weak, nonatomic) IBOutlet UIGradientView *gradientView;
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -23,12 +23,12 @@
 
 @end
 
-@implementation CarouselScrollView
+@implementation UICarouselScrollView
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     if (self = [super initWithCoder:aDecoder]) {
-        UIView *view = [[[NSBundle mainBundle] loadNibNamed:@"CarouselScrollView" owner:self options:nil] objectAtIndex:0];
+        UIView *view = [[[NSBundle mainBundle] loadNibNamed:@"UICarouselScrollView" owner:self options:nil] objectAtIndex:0];
         [view setFrame:self.bounds];
         [self addSubview:view];
         
@@ -125,7 +125,7 @@
 - (void)setGradientColors:(NSArray *)colors
 {
     [self.gradientView setHidden:NO];
-//        self.gradientView.layer.colors = @[(id)[UIColorFromRGB(0x000000) colorWithAlphaComponent:0].CGColor,(id)[UIColorFromRGB(0x000000) colorWithAlphaComponent:0.6].CGColor];
+    [self.gradientView.layer setColors:colors];
 }
 
 - (void)setCurrentViewIndex:(NSInteger)currentViewIndex
@@ -139,11 +139,13 @@
 #pragma mark - Timer
 - (void)startTimer
 {
-    if (scheduler) {
-        [scheduler invalidate];
-        scheduler = nil;
+    if (self.slideTime > 0) {
+        if (scheduler) {
+            [scheduler invalidate];
+            scheduler = nil;
+        }
+        scheduler = [NSTimer scheduledTimerWithTimeInterval:self.slideTime target:self selector:@selector(slideScheduler) userInfo:nil repeats:YES];
     }
-    scheduler = [NSTimer scheduledTimerWithTimeInterval:BannerSlideTime target:self selector:@selector(slideScheduler) userInfo:nil repeats:YES];
 }
 - (void)slideScheduler
 {
@@ -151,9 +153,9 @@
         [scheduler invalidate];
         scheduler = nil;
     }
-
+    
     if (self.numberOfPage > 0) {
-        [self slideToBannerWithDelta:1];
+        [self slideScrollViewWithDelta:1];
     }
 }
 
@@ -162,7 +164,7 @@
 {
     if (self.numberOfPage > 0) {
         [self startTimer];
-        NSInteger viewIndex = BannerBaseIndex * self.numberOfPage + MAX(self.pageControl.currentPage,0);
+        NSInteger viewIndex = BaseViewIndex * self.numberOfPage + MAX(self.pageControl.currentPage,0);
         [self reloadViewWithViewIndex:viewIndex];
     }
 }
@@ -179,23 +181,23 @@
     //ScrollView Subview
     [self layoutIfNeeded];
     self.scrollView.contentSize = CGSizeMake(CGFLOAT_MAX, self.scrollView.frame.size.height);
-
+    
     for (NSInteger i = -self.cacheCount; i <= self.cacheCount ; i++) {
         UIView *button   = [self getContentView:viewIndex + i];
         [self.scrollView addSubview:button];
     }
-
+    
     //ScrollView Position
     [self.scrollView setContentOffset:CGPointMake([self getContentOffsetX_atIndex:viewIndex], 0) animated:YES];
     
     //ScrollView Content
-    [self updateBannerDescription];
+    [self updateContentDescription];
 }
 
-- (void)updateNextBannerView:(NSInteger)nextCurrentIndex delta:(NSInteger)delta
+- (void)updateScrollViewToViewIndex:(NSInteger)nextCurrentIndex delta:(NSInteger)delta
 {
     [self setCurrentViewIndex:nextCurrentIndex];
-    [self updateBannerDescription];
+    [self updateContentDescription];
     
     for (int i=0 ; i<= self.cacheCount; i++) {
         NSInteger newIndex = self.currentViewIndex + delta*i;
@@ -205,9 +207,9 @@
     }
 }
 
-- (void)updateBannerDescription
+- (void)updateContentDescription
 {
-    [UIView animateWithDuration:BannerContentAppearanceTime animations:^{
+    [UIView animateWithDuration:BaseDescriptionAppearanceTime animations:^{
         self.titleLabel.alpha = 0;
         self.subTitleLabel.alpha = 0;
     } completion:^(BOOL finished) {
@@ -215,7 +217,7 @@
         self.titleLabel.text = [self getTitleDescription];
         self.subTitleLabel.text = [self getSubTitleDescription];
         
-        [UIView animateWithDuration:BannerContentAppearanceTime animations:^{
+        [UIView animateWithDuration:BaseDescriptionAppearanceTime animations:^{
             self.titleLabel.alpha = 1;
             self.subTitleLabel.alpha = 1;
         }];
@@ -243,19 +245,19 @@
     targetContentOffset->x = [self getContentOffsetX_atIndex:targetIndex];
     
     NSInteger currentIndexCandidate = (NSInteger)targetIndex;
- 
+    
     NSInteger diff = currentIndexCandidate - self.currentViewIndex;
     if (ABS(diff) > self.cacheCount) {
         [self reloadViewWithViewIndex:(self.currentViewIndex + diff)];
     } else if (self.currentViewIndex > currentIndexCandidate) {
-        [self updateNextBannerView:(self.currentViewIndex + diff) delta:-1];
+        [self updateScrollViewToViewIndex:(self.currentViewIndex + diff) delta:-1];
     } else if (self.currentViewIndex < currentIndexCandidate) {
-        [self updateNextBannerView:(self.currentViewIndex + diff) delta:1];
+        [self updateScrollViewToViewIndex:(self.currentViewIndex + diff) delta:1];
     }
 }
 
 
-#pragma mark - Banner Action
+#pragma mark - ScrollView Action
 - (IBAction)viewTapped:(UITapGestureRecognizer *)recognizer
 {
     if (self.numberOfPage > 0) {
@@ -263,13 +265,13 @@
             CGPoint point = [recognizer locationInView:self.scrollView];
             for (UIView *aSubView in [self.scrollView subviews]){
                 if(CGRectContainsPoint(aSubView.frame, point)) {
-                    [self bannerButtonClicked:aSubView.tag];
+                    [self contentViewClicked:aSubView.tag];
                 }
             }
         }
     }
 }
-- (void)bannerButtonClicked:(NSInteger)viewIndex
+- (void)contentViewClicked:(NSInteger)viewIndex
 {
     NSInteger delta = viewIndex - self.currentViewIndex;
     if (delta == 0)
@@ -285,15 +287,15 @@
         else
         {
             [self startTimer];
-            [self slideToBannerWithDelta:delta];
+            [self slideScrollViewWithDelta:delta];
         }
     }
 }
 
-- (void)slideToBannerWithDelta:(NSInteger)delta
+- (void)slideScrollViewWithDelta:(NSInteger)delta
 {
     //ScrollView Content (data)
-    [self updateNextBannerView:self.currentViewIndex+delta delta:delta];
+    [self updateScrollViewToViewIndex:self.currentViewIndex+delta delta:delta];
     
     //ScrollView Position
     [self.scrollView setContentOffset:CGPointMake([self getContentOffsetX_atIndex:self.currentViewIndex], 0) animated:YES];

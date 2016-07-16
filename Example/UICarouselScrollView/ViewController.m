@@ -8,11 +8,11 @@
 
 #import "ViewController.h"
 
-#import "CarouselScrollView.h"
+#import "UICarouselScrollView.h"
 
 @interface ViewController ()
-<CarouselScrollViewDelegate>
-@property (weak, nonatomic) IBOutlet CarouselScrollView *testView;
+<UICarouselScrollViewDelegate>
+@property (weak, nonatomic) IBOutlet UICarouselScrollView *testView;
 @end
 
 @implementation ViewController
@@ -27,7 +27,7 @@
 #pragma mark - Initializer
 - (void)initializeProperties
 {
-    [self.testView setMaxWidth:375];
+//    [self.testView setMaxWidth:375];
     [self.testView setDelegate:self];
     [self.testView setSlideTime:3];
     [self.testView setShouldDetectNextAndPreviousClickEvent:NO];
@@ -47,7 +47,7 @@
 }
 
 #pragma mark - CarouselScrollViewDelegate
-- (UIView *)carouselScrollView:(CarouselScrollView *)view viewAtPage:(NSInteger)page
+- (UIView *)carouselScrollView:(UICarouselScrollView *)view viewAtPage:(NSInteger)page
 {
     UIImageView *imageView = [[UIImageView alloc] init];
     [imageView setClipsToBounds:YES];
@@ -63,15 +63,15 @@
     return imageView;
 }
 
-- (void)carouselScrollView:(CarouselScrollView *)view clickedAtPage:(NSInteger)page
+- (void)carouselScrollView:(UICarouselScrollView *)view clickedAtPage:(NSInteger)page
 {
     NSLog(@"click %@",@(page));
 }
-- (NSString *)carouselScrollView:(CarouselScrollView *)view titleAtPage:(NSInteger)page
+- (NSString *)carouselScrollView:(UICarouselScrollView *)view titleAtPage:(NSInteger)page
 {
     return [NSString stringWithFormat:@"title %@",@(page)];
 }
-- (NSString *)carouselScrollView:(CarouselScrollView *)view subTitleAtPage:(NSInteger)page
+- (NSString *)carouselScrollView:(UICarouselScrollView *)view subTitleAtPage:(NSInteger)page
 {
     return [NSString stringWithFormat:@"sub title %@",@(page)];
 }

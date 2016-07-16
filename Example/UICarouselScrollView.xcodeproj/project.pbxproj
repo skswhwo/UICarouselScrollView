@@ -16,8 +16,9 @@
 		E2ABC4041D3A677900191CC7 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC4011D3A677900191CC7 /* LICENSE */; };
 		E2ABC4051D3A677900191CC7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC4021D3A677900191CC7 /* README.md */; };
 		E2ABC4061D3A677900191CC7 /* UICarouselScrollView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC4031D3A677900191CC7 /* UICarouselScrollView.podspec */; };
-		E2ABC4101D3A6D4300191CC7 /* CarouselScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC40E1D3A6D4300191CC7 /* CarouselScrollView.m */; };
-		E2ABC4111D3A6D4300191CC7 /* CarouselScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC40F1D3A6D4300191CC7 /* CarouselScrollView.xib */; };
+		E2ABC4101D3A6D4300191CC7 /* UICarouselScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC40E1D3A6D4300191CC7 /* UICarouselScrollView.m */; };
+		E2ABC4111D3A6D4300191CC7 /* UICarouselScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC40F1D3A6D4300191CC7 /* UICarouselScrollView.xib */; };
+		E2ABC43A1D3AB4E900191CC7 /* UIGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC4391D3AB4E900191CC7 /* UIGradientView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +35,11 @@
 		E2ABC4011D3A677900191CC7 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E2ABC4021D3A677900191CC7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E2ABC4031D3A677900191CC7 /* UICarouselScrollView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = UICarouselScrollView.podspec; path = ../UICarouselScrollView.podspec; sourceTree = "<group>"; };
-		E2ABC40D1D3A6D4300191CC7 /* CarouselScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarouselScrollView.h; path = ../UICarouselScrollView/Classes/CarouselScrollView.h; sourceTree = "<group>"; };
-		E2ABC40E1D3A6D4300191CC7 /* CarouselScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarouselScrollView.m; path = ../UICarouselScrollView/Classes/CarouselScrollView.m; sourceTree = "<group>"; };
-		E2ABC40F1D3A6D4300191CC7 /* CarouselScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CarouselScrollView.xib; path = ../UICarouselScrollView/Classes/CarouselScrollView.xib; sourceTree = "<group>"; };
+		E2ABC40D1D3A6D4300191CC7 /* UICarouselScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UICarouselScrollView.h; path = ../UICarouselScrollView/Classes/UICarouselScrollView.h; sourceTree = "<group>"; };
+		E2ABC40E1D3A6D4300191CC7 /* UICarouselScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UICarouselScrollView.m; path = ../UICarouselScrollView/Classes/UICarouselScrollView.m; sourceTree = "<group>"; };
+		E2ABC40F1D3A6D4300191CC7 /* UICarouselScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UICarouselScrollView.xib; path = ../UICarouselScrollView/Classes/UICarouselScrollView.xib; sourceTree = "<group>"; };
+		E2ABC4381D3AB4E900191CC7 /* UIGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIGradientView.h; path = ../UICarouselScrollView/Classes/UIGradientView.h; sourceTree = "<group>"; };
+		E2ABC4391D3AB4E900191CC7 /* UIGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIGradientView.m; path = ../UICarouselScrollView/Classes/UIGradientView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +108,11 @@
 		E2ABC4071D3A688800191CC7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E2ABC40D1D3A6D4300191CC7 /* CarouselScrollView.h */,
-				E2ABC40E1D3A6D4300191CC7 /* CarouselScrollView.m */,
-				E2ABC40F1D3A6D4300191CC7 /* CarouselScrollView.xib */,
+				E2ABC40D1D3A6D4300191CC7 /* UICarouselScrollView.h */,
+				E2ABC40E1D3A6D4300191CC7 /* UICarouselScrollView.m */,
+				E2ABC40F1D3A6D4300191CC7 /* UICarouselScrollView.xib */,
+				E2ABC4381D3AB4E900191CC7 /* UIGradientView.h */,
+				E2ABC4391D3AB4E900191CC7 /* UIGradientView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -170,7 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2ABC3F31D3A665600191CC7 /* LaunchScreen.storyboard in Resources */,
-				E2ABC4111D3A6D4300191CC7 /* CarouselScrollView.xib in Resources */,
+				E2ABC4111D3A6D4300191CC7 /* UICarouselScrollView.xib in Resources */,
 				E2ABC4061D3A677900191CC7 /* UICarouselScrollView.podspec in Resources */,
 				E2ABC3F01D3A665600191CC7 /* Assets.xcassets in Resources */,
 				E2ABC4041D3A677900191CC7 /* LICENSE in Resources */,
@@ -185,8 +190,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2ABC43A1D3AB4E900191CC7 /* UIGradientView.m in Sources */,
 				E2ABC3EB1D3A665600191CC7 /* ViewController.m in Sources */,
-				E2ABC4101D3A6D4300191CC7 /* CarouselScrollView.m in Sources */,
+				E2ABC4101D3A6D4300191CC7 /* UICarouselScrollView.m in Sources */,
 				E2ABC3E81D3A665600191CC7 /* AppDelegate.m in Sources */,
 				E2ABC4051D3A677900191CC7 /* README.md in Sources */,
 				E2ABC3E51D3A665600191CC7 /* main.m in Sources */,
