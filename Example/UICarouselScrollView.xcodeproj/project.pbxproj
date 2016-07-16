@@ -16,9 +16,9 @@
 		E2ABC4041D3A677900191CC7 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC4011D3A677900191CC7 /* LICENSE */; };
 		E2ABC4051D3A677900191CC7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC4021D3A677900191CC7 /* README.md */; };
 		E2ABC4061D3A677900191CC7 /* UICarouselScrollView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC4031D3A677900191CC7 /* UICarouselScrollView.podspec */; };
-		E2ABC4101D3A6D4300191CC7 /* UICarouselScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC40E1D3A6D4300191CC7 /* UICarouselScrollView.m */; };
-		E2ABC4111D3A6D4300191CC7 /* UICarouselScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC40F1D3A6D4300191CC7 /* UICarouselScrollView.xib */; };
-		E2ABC43A1D3AB4E900191CC7 /* UIGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC4391D3AB4E900191CC7 /* UIGradientView.m */; };
+		E2ABC43B1D3ABF0C00191CC7 /* UIGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC4391D3AB4E900191CC7 /* UIGradientView.m */; };
+		E2ABC43C1D3ABF1000191CC7 /* UICarouselScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC40E1D3A6D4300191CC7 /* UICarouselScrollView.m */; };
+		E2ABC43D1D3ABF2800191CC7 /* UICarouselScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC40F1D3A6D4300191CC7 /* UICarouselScrollView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -175,9 +175,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2ABC3F31D3A665600191CC7 /* LaunchScreen.storyboard in Resources */,
-				E2ABC4111D3A6D4300191CC7 /* UICarouselScrollView.xib in Resources */,
 				E2ABC4061D3A677900191CC7 /* UICarouselScrollView.podspec in Resources */,
 				E2ABC3F01D3A665600191CC7 /* Assets.xcassets in Resources */,
+				E2ABC43D1D3ABF2800191CC7 /* UICarouselScrollView.xib in Resources */,
 				E2ABC4041D3A677900191CC7 /* LICENSE in Resources */,
 				E2ABC3EE1D3A665600191CC7 /* Main.storyboard in Resources */,
 			);
@@ -190,12 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2ABC43A1D3AB4E900191CC7 /* UIGradientView.m in Sources */,
 				E2ABC3EB1D3A665600191CC7 /* ViewController.m in Sources */,
-				E2ABC4101D3A6D4300191CC7 /* UICarouselScrollView.m in Sources */,
 				E2ABC3E81D3A665600191CC7 /* AppDelegate.m in Sources */,
+				E2ABC43B1D3ABF0C00191CC7 /* UIGradientView.m in Sources */,
 				E2ABC4051D3A677900191CC7 /* README.md in Sources */,
 				E2ABC3E51D3A665600191CC7 /* main.m in Sources */,
+				E2ABC43C1D3ABF1000191CC7 /* UICarouselScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
