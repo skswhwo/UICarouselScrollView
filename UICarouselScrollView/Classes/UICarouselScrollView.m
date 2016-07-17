@@ -28,50 +28,24 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     if (self = [super initWithCoder:aDecoder]) {
-        UIView *view = [[[NSBundle mainBundle] loadNibNamed:@"UICarouselScrollView" owner:self options:nil] objectAtIndex:0];
-        [view setFrame:self.bounds];
-        [self addSubview:view];
-        
-        [view setTranslatesAutoresizingMaskIntoConstraints:NO];
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:view
-                                                         attribute:NSLayoutAttributeTop
-                                                         relatedBy:NSLayoutRelationEqual
-                                                            toItem:self
-                                                         attribute:NSLayoutAttributeTop
-                                                        multiplier:1
-                                                          constant:0]];
-        
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:view
-                                                         attribute:NSLayoutAttributeBottom
-                                                         relatedBy:NSLayoutRelationEqual
-                                                            toItem:self
-                                                         attribute:NSLayoutAttributeBottom
-                                                        multiplier:1
-                                                          constant:0]];
-        
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:view
-                                                         attribute:NSLayoutAttributeLeading
-                                                         relatedBy:NSLayoutRelationEqual
-                                                            toItem:self
-                                                         attribute:NSLayoutAttributeLeading
-                                                        multiplier:1
-                                                          constant:0]];
-        
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:view
-                                                         attribute:NSLayoutAttributeTrailing
-                                                         relatedBy:NSLayoutRelationEqual
-                                                            toItem:self
-                                                         attribute:NSLayoutAttributeTrailing
-                                                        multiplier:1
-                                                          constant:0]];
+        [self initializer];
     }
     return self;
 }
-
-- (void)awakeFromNib
+- (id)initWithFrame:(CGRect)frame
 {
-    [super awakeFromNib];
-    
+    if (self = [super initWithFrame:frame]) {
+        [self initializer];
+    }
+    return self;
+}
+- (id)init
+{
+    return [self initWithFrame:CGRectZero];
+}
+
+- (void)initializer
+{
     [self initializeUI];
     [self initializeFont];
     [self initializeProperties];
@@ -79,6 +53,43 @@
 
 - (void)initializeUI
 {
+    UIView *view = [[[NSBundle mainBundle] loadNibNamed:@"UICarouselScrollView" owner:self options:nil] objectAtIndex:0];
+    [view setFrame:self.bounds];
+    [self addSubview:view];
+    
+    [view setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:view
+                                                     attribute:NSLayoutAttributeTop
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:self
+                                                     attribute:NSLayoutAttributeTop
+                                                    multiplier:1
+                                                      constant:0]];
+    
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:view
+                                                     attribute:NSLayoutAttributeBottom
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:self
+                                                     attribute:NSLayoutAttributeBottom
+                                                    multiplier:1
+                                                      constant:0]];
+    
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:view
+                                                     attribute:NSLayoutAttributeLeading
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:self
+                                                     attribute:NSLayoutAttributeLeading
+                                                    multiplier:1
+                                                      constant:0]];
+    
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:view
+                                                     attribute:NSLayoutAttributeTrailing
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:self
+                                                     attribute:NSLayoutAttributeTrailing
+                                                    multiplier:1
+                                                      constant:0]];
+    
     [self.descriptionView setHidden:YES];
     [self.gradientView setHidden:YES];
 }

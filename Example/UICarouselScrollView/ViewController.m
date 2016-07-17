@@ -12,38 +12,51 @@
 
 @interface ViewController ()
 <UICarouselScrollViewDelegate>
-@property (weak, nonatomic) IBOutlet UICarouselScrollView *testView;
+{
+    UICarouselScrollView *carouselView;
+}
+@property (weak, nonatomic) IBOutlet UICarouselScrollView *nibView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self initializeProperties];
     
+    //Asynchronous
     [self requestSomething];
 }
 
 #pragma mark - Initializer
 - (void)initializeProperties
 {
-//    [self.testView setMaxWidth:375];
-    [self.testView setDelegate:self];
-    [self.testView setSlideTime:3];
-    [self.testView setShouldDetectNextAndPreviousClickEvent:NO];
-    [self.testView setGradientColors:@[(id)[[UIColor blackColor] colorWithAlphaComponent:0].CGColor,(id)[[UIColor blackColor] colorWithAlphaComponent:0.6].CGColor]];
+    //Nib
+    [self.nibView setMaxWidth:480];
+    [self.nibView setDelegate:self];
+    [self.nibView setSlideTime:3];
+    [self.nibView setShouldDetectNextAndPreviousClickEvent:NO];
+    [self.nibView setGradientColors:@[(id)[[UIColor blackColor] colorWithAlphaComponent:0].CGColor,(id)[[UIColor blackColor] colorWithAlphaComponent:0.6].CGColor]];
+    
+    //Programmatically
+    carouselView = [[UICarouselScrollView alloc] initWithFrame:CGRectMake(10, 300, 260, 180)];
+    [self.view addSubview:carouselView];
+    [carouselView setDelegate:self];
+    [carouselView setMaxWidth:200];
+    [carouselView setSlideTime:2];
+    [carouselView setShouldDetectNextAndPreviousClickEvent:NO];
+    [carouselView setGradientColors:@[(id)[[UIColor blackColor] colorWithAlphaComponent:0].CGColor,(id)[[UIColor blackColor] colorWithAlphaComponent:0.6].CGColor]];
 }
-
 #pragma mark - API
 - (void)requestSomething
 {
     [self performSelector:@selector(finishRequest) withObject:nil afterDelay:2];
 }
-
-#pragma mark - API Callback
 - (void)finishRequest
 {
-    [self.testView setNumberOfPage:3];
+    [self.nibView setNumberOfPage:3];
+    [carouselView setNumberOfPage:3];
 }
 
 #pragma mark - CarouselScrollViewDelegate

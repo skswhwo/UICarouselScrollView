@@ -34,7 +34,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="testView" destination="Yx9-Po-ryA" id="Wpa-mS-69A"/>
+                        <outlet property="nibView" destination="Yx9-Po-ryA" id="F8e-RV-fxn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
