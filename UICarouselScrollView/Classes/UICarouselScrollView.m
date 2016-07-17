@@ -100,23 +100,12 @@
     [self addObserver:self forKeyPath:@"bounds" options:(NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld) context:nil];
 }
 
-#pragma mark - State
-- (void)changeCompleteState
-{
-    [self.descriptionView setHidden:NO];
-    self.descriptionView.alpha = 0;
-    [UIView animateWithDuration:0.5 animations:^{
-        self.descriptionView.alpha = 1;
-    }];
-    [self.activityIndicator stopAnimating];
-}
-
 #pragma mark - Setter
 - (void)setNumberOfPage:(NSInteger)numberOfPage
 {
     _numberOfPage = numberOfPage;
     
-    [self.activityIndicator setHidden:YES];
+    [self.activityIndicator stopAnimating];
     [self.descriptionView setHidden:NO];
     [self.pageControl setNumberOfPages:self.numberOfPage];
     [self reloadCarouselView];
@@ -321,7 +310,7 @@
     UIView *view = [self.delegate carouselScrollView:self viewAtPage:page];
     CGRect frame            = self.scrollView.frame;
     frame.size.width        = [self getContentWidth];
-    float margin            = [UIScreen mainScreen].bounds.size.width - frame.size.width;
+    float margin            = self.bounds.size.width - frame.size.width;
     frame.origin.x          = viewIndex * frame.size.width + margin/2;
     [view setFrame:frame];
     [view setTag:viewIndex];
@@ -351,12 +340,7 @@
 
 - (float)getContentWidth
 {
-    return MIN([self getMaxWidth], [UIScreen mainScreen].bounds.size.width);
-}
-
-- (float)getMaxWidth
-{
-    return (self.maxWidth > 0?self.maxWidth:[UIScreen mainScreen].bounds.size.width);
+    return MIN((self.maxWidth > 0?self.maxWidth:self.bounds.size.width), self.bounds.size.width);
 }
 
 - (BOOL)isVisible
