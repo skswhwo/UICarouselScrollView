@@ -1,23 +1,61 @@
 # UICarouselScrollView
 
-[![CI Status](http://img.shields.io/travis/skswhwo/UICarouselScrollView.svg?style=flat)](https://travis-ci.org/skswhwo/UICarouselScrollView)
-[![Version](https://img.shields.io/cocoapods/v/UICarouselScrollView.svg?style=flat)](http://cocoapods.org/pods/UICarouselScrollView)
-[![License](https://img.shields.io/cocoapods/l/UICarouselScrollView.svg?style=flat)](http://cocoapods.org/pods/UICarouselScrollView)
-[![Platform](https://img.shields.io/cocoapods/p/UICarouselScrollView.svg?style=flat)](http://cocoapods.org/pods/UICarouselScrollView)
+Horizontal scrollable view with specific content width.
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
+![alt text](https://github.com/skswhwo/UICarouselScrollView/blob/master/sample0.png "demo")
+![alt text](https://github.com/skswhwo/UICarouselScrollView/blob/master/sample1.png "demo")
+![alt text](https://github.com/skswhwo/UICarouselScrollView/blob/master/sample2.png "demo")
 
 ## Installation
 
 UICarouselScrollView is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
-
-```ruby
+```
 pod "UICarouselScrollView"
+```
+And then run:
+
+```
+$ pod install
+```
+
+## Usage
+### Delegate
+```objective-c
+@required
+- (UIView *)carouselScrollView:(UICarouselScrollView *)view viewAtPage:(NSInteger)page;
+
+@optional
+- (void)carouselScrollView:(UICarouselScrollView *)view clickedAtPage:(NSInteger)page;
+- (NSString *)carouselScrollView:(UICarouselScrollView *)view titleAtPage:(NSInteger)page;
+- (NSString *)carouselScrollView:(UICarouselScrollView *)view subTitleAtPage:(NSInteger)page;
+```
+### Nib
+```objective-c
+[self.nibView setDelegate:self];
+[self.nibView setSlideTime:3];
+[self.nibView setShouldDetectNextAndPreviousClickEvent:NO];
+[self.nibView setGradientColors:@[(id)[[UIColor blackColor] colorWithAlphaComponent:0].CGColor,(id)[[UIColor blackColor] colorWithAlphaComponent:0.6].CGColor]];
+```
+
+### Programmatically
+```objective-c
+carouselView = [[UICarouselScrollView alloc] initWithFrame:CGRectMake(10, 300, 260, 180)];
+[self.view addSubview:carouselView];
+[carouselView setDelegate:self];
+[carouselView setMaxWidth:200];
+[carouselView setSlideTime:2];
+[carouselView setShouldDetectNextAndPreviousClickEvent:NO];
+[carouselView setGradientColors:@[(id)[[UIColor blackColor] colorWithAlphaComponent:0].CGColor,(id)[[UIColor blackColor] colorWithAlphaComponent:0.6].CGColor]];
+```
+
+## Properties
+```objective-c
+@property (nonatomic, assign) NSInteger numberOfPage;	//trigger
+@property (nonatomic, assign) NSInteger cacheCount; //default = 2 (previous&next pages)
+@property (nonatomic, assign) float slideTime;  //if 0, don't auto slide
+@property (nonatomic, assign) float maxWidth;   //if 0, view size
+@property (nonatomic, assign) BOOL shouldDetectNextAndPreviousClickEvent;
 ```
 
 ## Author
