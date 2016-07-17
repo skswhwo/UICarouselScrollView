@@ -183,8 +183,8 @@
     self.scrollView.contentSize = CGSizeMake(CGFLOAT_MAX, self.scrollView.frame.size.height);
     
     for (NSInteger i = -self.cacheCount; i <= self.cacheCount ; i++) {
-        UIView *button   = [self getContentView:viewIndex + i];
-        [self.scrollView addSubview:button];
+        UIView *contentView   = [self getContentView:viewIndex + i];
+        [self.scrollView addSubview:contentView];
     }
     
     //ScrollView Position

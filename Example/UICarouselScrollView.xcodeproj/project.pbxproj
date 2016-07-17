@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E22AEB451D3B70F6000C3CD7 /* UICarouselScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC40F1D3A6D4300191CC7 /* UICarouselScrollView.xib */; };
 		E2ABC3E51D3A665600191CC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC3E41D3A665600191CC7 /* main.m */; };
 		E2ABC3E81D3A665600191CC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC3E71D3A665600191CC7 /* AppDelegate.m */; };
 		E2ABC3EB1D3A665600191CC7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC3EA1D3A665600191CC7 /* ViewController.m */; };
@@ -18,7 +19,6 @@
 		E2ABC4061D3A677900191CC7 /* UICarouselScrollView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC4031D3A677900191CC7 /* UICarouselScrollView.podspec */; };
 		E2ABC43B1D3ABF0C00191CC7 /* UIGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC4391D3AB4E900191CC7 /* UIGradientView.m */; };
 		E2ABC43C1D3ABF1000191CC7 /* UICarouselScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC40E1D3A6D4300191CC7 /* UICarouselScrollView.m */; };
-		E2ABC43D1D3ABF2800191CC7 /* UICarouselScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC40F1D3A6D4300191CC7 /* UICarouselScrollView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -177,7 +177,7 @@
 				E2ABC3F31D3A665600191CC7 /* LaunchScreen.storyboard in Resources */,
 				E2ABC4061D3A677900191CC7 /* UICarouselScrollView.podspec in Resources */,
 				E2ABC3F01D3A665600191CC7 /* Assets.xcassets in Resources */,
-				E2ABC43D1D3ABF2800191CC7 /* UICarouselScrollView.xib in Resources */,
+				E22AEB451D3B70F6000C3CD7 /* UICarouselScrollView.xib in Resources */,
 				E2ABC4041D3A677900191CC7 /* LICENSE in Resources */,
 				E2ABC3EE1D3A665600191CC7 /* Main.storyboard in Resources */,
 			);
