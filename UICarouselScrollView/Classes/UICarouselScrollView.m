@@ -25,6 +25,11 @@
 
 @implementation UICarouselScrollView
 
+- (void)dealloc
+{
+    [self removeObserver:self forKeyPath:@"frame"];
+}
+
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     if (self = [super initWithCoder:aDecoder]) {
