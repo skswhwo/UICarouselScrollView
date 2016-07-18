@@ -108,7 +108,7 @@
     self.titleLabel.text            = @"";
     self.subTitleLabel.text         = @"";
     
-    [self addObserver:self forKeyPath:@"bounds" options:(NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld) context:nil];
+    [self addObserver:self forKeyPath:@"frame" options:(NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld) context:nil];
 }
 
 #pragma mark - Setter
@@ -305,7 +305,7 @@
 #pragma mark - Observer
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    if (object == self && [keyPath isEqualToString:@"bounds"]) {
+    if (object == self && [keyPath isEqualToString:@"frame"]) {
         CGRect new = [[change objectForKey:@"new"] CGRectValue];
         CGRect old = [[change objectForKey:@"old"] CGRectValue];
         if (new.size.width != old.size.width) {
