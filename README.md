@@ -2,9 +2,8 @@
 
 Horizontal scrollable view with specific content width.
 
-![alt text](https://github.com/skswhwo/UICarouselScrollView/blob/master/sample0.png "demo")
-![alt text](https://github.com/skswhwo/UICarouselScrollView/blob/master/sample1.png "demo")
-![alt text](https://github.com/skswhwo/UICarouselScrollView/blob/master/sample2.png "demo")
+![alt text](https://github.com/skswhwo/UICarouselScrollView/blob/master/sample1.gif "demo")
+![alt text](https://github.com/skswhwo/UICarouselScrollView/blob/master/sample2.gif "demo")
 
 ## Installation
 

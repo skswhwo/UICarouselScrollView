@@ -28,6 +28,7 @@
 - (void)dealloc
 {
     [self removeObserver:self forKeyPath:@"frame"];
+    [self removeObserver:self forKeyPath:@"bounds"];
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
@@ -114,6 +115,7 @@
     self.subTitleLabel.text         = @"";
     
     [self addObserver:self forKeyPath:@"frame" options:(NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld) context:nil];
+    [self addObserver:self forKeyPath:@"bounds" options:(NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld) context:nil];
 }
 
 #pragma mark - Setter
@@ -139,6 +141,12 @@
     if (self.numberOfPage > 0) {
         self.pageControl.currentPage = currentViewIndex%self.numberOfPage;
     }
+}
+
+- (void)setSlideTime:(float)slideTime
+{
+    _slideTime = slideTime;
+    [self startTimer];
 }
 
 #pragma mark - Timer
@@ -310,7 +318,7 @@
 #pragma mark - Observer
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    if (object == self && [keyPath isEqualToString:@"frame"]) {
+    if (object == self) {
         CGRect new = [[change objectForKey:@"new"] CGRectValue];
         CGRect old = [[change objectForKey:@"old"] CGRectValue];
         if (new.size.width != old.size.width) {
