@@ -12,13 +12,13 @@
 		E2ABC3E81D3A665600191CC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC3E71D3A665600191CC7 /* AppDelegate.m */; };
 		E2ABC3EB1D3A665600191CC7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC3EA1D3A665600191CC7 /* ViewController.m */; };
 		E2ABC3EE1D3A665600191CC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC3EC1D3A665600191CC7 /* Main.storyboard */; };
-		E2ABC3F01D3A665600191CC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC3EF1D3A665600191CC7 /* Assets.xcassets */; };
 		E2ABC3F31D3A665600191CC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC3F11D3A665600191CC7 /* LaunchScreen.storyboard */; };
 		E2ABC4041D3A677900191CC7 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC4011D3A677900191CC7 /* LICENSE */; };
 		E2ABC4051D3A677900191CC7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC4021D3A677900191CC7 /* README.md */; };
 		E2ABC4061D3A677900191CC7 /* UICarouselScrollView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC4031D3A677900191CC7 /* UICarouselScrollView.podspec */; };
 		E2ABC43B1D3ABF0C00191CC7 /* UIGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC4391D3AB4E900191CC7 /* UIGradientView.m */; };
 		E2ABC43C1D3ABF1000191CC7 /* UICarouselScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2ABC40E1D3A6D4300191CC7 /* UICarouselScrollView.m */; };
+		E2E5B66D1DB67F67007D646B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2ABC3EF1D3A665600191CC7 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -176,9 +176,9 @@
 			files = (
 				E2ABC3F31D3A665600191CC7 /* LaunchScreen.storyboard in Resources */,
 				E2ABC4061D3A677900191CC7 /* UICarouselScrollView.podspec in Resources */,
-				E2ABC3F01D3A665600191CC7 /* Assets.xcassets in Resources */,
 				E22AEB451D3B70F6000C3CD7 /* UICarouselScrollView.xib in Resources */,
 				E2ABC4041D3A677900191CC7 /* LICENSE in Resources */,
+				E2E5B66D1DB67F67007D646B /* Assets.xcassets in Resources */,
 				E2ABC3EE1D3A665600191CC7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

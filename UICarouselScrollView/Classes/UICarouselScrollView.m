@@ -2,7 +2,7 @@
 #import "UICarouselScrollView.h"
 #import "UIGradientView.h"
 
-#define BaseViewIndex 40000
+#define BaseViewIndex 10000
 #define BaseDescriptionAppearanceTime 0.2
 
 @interface UICarouselScrollView ()

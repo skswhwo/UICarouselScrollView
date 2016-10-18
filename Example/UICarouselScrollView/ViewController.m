@@ -67,12 +67,13 @@
     [imageView setContentMode:UIViewContentModeScaleAspectFill];
     
     if (page == 0) {
-        [imageView setImage:[UIImage imageNamed:@"test0"]];
+        [imageView setImage:[self getImageRect:CGRectMake(0, 0, 1, 1) color:[UIColor redColor]]];
     } else if (page == 1) {
-        [imageView setImage:[UIImage imageNamed:@"test1"]];
+        [imageView setImage:[self getImageRect:CGRectMake(0, 0, 1, 1) color:[UIColor blueColor]]];
     } else if (page == 2) {
-        [imageView setImage:[UIImage imageNamed:@"test2"]];
+        [imageView setImage:[self getImageRect:CGRectMake(0, 0, 1, 1) color:[UIColor yellowColor]]];
     }
+    
     return imageView;
 }
 
@@ -87,6 +88,17 @@
 - (NSString *)carouselScrollView:(UICarouselScrollView *)view subTitleAtPage:(NSInteger)page
 {
     return [NSString stringWithFormat:@"sub title %@",@(page)];
+}
+
+-(UIImage *)getImageRect:(CGRect)rect color:(UIColor *)color
+{
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context, rect);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
 
 @end
