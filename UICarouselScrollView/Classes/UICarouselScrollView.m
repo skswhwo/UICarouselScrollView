@@ -2,7 +2,7 @@
 #import "UICarouselScrollView.h"
 #import "UIGradientView.h"
 
-#define BaseViewIndex 10000
+#define BaseViewIndex 3000
 #define BaseDescriptionAppearanceTime 0.2
 
 @interface UICarouselScrollView ()
@@ -256,7 +256,6 @@
     }
     targetIndex = MAX(targetIndex, 0);
     targetContentOffset->x = [self getContentOffsetX_atIndex:targetIndex];
-    
     NSInteger currentIndexCandidate = (NSInteger)targetIndex;
     
     NSInteger diff = currentIndexCandidate - self.currentViewIndex;
