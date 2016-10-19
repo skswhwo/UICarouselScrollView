@@ -2,13 +2,14 @@
 #import "UICarouselScrollView.h"
 #import "UIGradientView.h"
 
-#define BaseViewIndex 3000
+#define BaseViewIndex 2000
 #define BaseDescriptionAppearanceTime 0.2
 
 @interface UICarouselScrollView ()
 <UIScrollViewDelegate>
 {
     NSTimer *scheduler;
+    UIView *firstView;
 }
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -209,13 +210,20 @@
 
 - (void)updateScrollViewToViewIndex:(NSInteger)nextCurrentIndex delta:(NSInteger)delta
 {
-    [self setCurrentViewIndex:nextCurrentIndex];
-    [self updateContentDescription];
-    
-    for (int i=0 ; i<= self.cacheCount; i++) {
-        NSInteger newIndex = self.currentViewIndex + delta*i;
-        if ([self.scrollView viewWithTag:newIndex] == nil) {
-            [self.scrollView addSubview:[self getContentView:newIndex]];
+    if (nextCurrentIndex >= 0) {
+        [self setCurrentViewIndex:nextCurrentIndex];
+        [self updateContentDescription];
+        
+        for (int i=0 ; i<= self.cacheCount; i++) {
+            NSInteger newIndex = self.currentViewIndex + delta*i;
+            if (newIndex == 0 && firstView == nil) {
+                firstView = [self getContentView:newIndex];
+                [self.scrollView addSubview:firstView];
+            } else if (newIndex > 0) {
+                if ([self.scrollView viewWithTag:newIndex] == nil) {
+                    [self.scrollView addSubview:[self getContentView:newIndex]];
+                }
+            }
         }
     }
 }
